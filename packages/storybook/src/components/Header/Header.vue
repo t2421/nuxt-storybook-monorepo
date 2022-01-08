@@ -50,11 +50,11 @@
   </header>
 </template>
 
-<script>
+<script lang="ts">
 import './header.css'
 import MyButton from '../Button/Button.vue'
-
-export default {
+import Vue from 'vue'
+export default Vue.extend({
   name: 'MyHeader',
 
   components: { MyButton },
@@ -76,5 +76,5 @@ export default {
       this.$emit('onCreateAccount')
     },
   },
-}
+})
 </script>
