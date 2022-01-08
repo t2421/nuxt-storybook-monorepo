@@ -75,11 +75,11 @@
   </article>
 </template>
 
-<script>
+<script lang="ts">
 import './page.css'
 import MyHeader from '../Header/Header.vue'
-
-export default {
+import Vue from 'vue'
+export default Vue.extend({
   name: 'MyPage',
 
   components: { MyHeader },
@@ -101,5 +101,5 @@ export default {
       this.$emit('onCreateAccount')
     },
   },
-}
+})
 </script>

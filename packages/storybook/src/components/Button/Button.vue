@@ -4,8 +4,9 @@
   </button>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
   name: 'MyButton',
   props: {
     label: {
@@ -49,7 +50,7 @@ export default {
       this.$emit('onClick')
     },
   },
-}
+})
 </script>
 <style lang="scss" scoped>
 .storybook-button {
