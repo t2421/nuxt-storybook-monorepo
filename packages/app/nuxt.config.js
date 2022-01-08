@@ -7,7 +7,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxt-storybook-monorepo',
+    title: 'test-nuxt',
     htmlAttrs: {
       lang: 'en',
     },
@@ -50,5 +50,13 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    extend(config, ctx) {
+      const path = require('path')
+      if (config.resolve && config.resolve.alias) {        
+        config.resolve.alias['@app'] = path.join(__dirname, '../app')
+        config.resolve.alias['@ui'] = path.join(__dirname, '../storybook')
+      }
+    },
+  },
 }
