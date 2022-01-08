@@ -54,7 +54,7 @@ export default {
   build: {
     extend(config, ctx) {
       const path = require('path')
-      if (config.resolve && config.resolve.alias) {        
+      if (config.resolve && config.resolve.alias) {
         config.resolve.alias['@app'] = path.join(__dirname, '../app')
         config.resolve.alias['@ui'] = path.join(__dirname, '../storybook')
       }

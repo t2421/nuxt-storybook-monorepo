@@ -2,12 +2,7 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "resolveJsonModule": true,
-    "types": [
-      "@types/jest",
-      "@types/node",
-      "@nuxt/types",
-      "@nuxtjs/axios",
-    ],
+    "types": ["@types/jest", "@types/node", "@nuxt/types", "@nuxtjs/axios"],
     "strict": false
   }
 }

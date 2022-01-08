@@ -6,25 +6,23 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
 import MyButton from '@ui/src/components/Button/Button.vue'
 import { defineComponent, onMounted } from '@nuxtjs/composition-api'
 
 export default defineComponent({
-  components: { MyButton },
   name: 'IndexPage',
+  components: { MyButton },
   setup() {
     onMounted(() => {
       console.log('Mounted')
     })
-  }
+  },
 })
-
 </script>
 <style lang="scss" scoped>
-  .test{
-    .hidden{
-      display: none;
-    }
+.test {
+  .hidden {
+    display: none;
   }
+}
 </style>
