@@ -5,12 +5,16 @@ module.exports = {
     node: true,
   },
   extends: [
-    '@nuxtjs/eslint-config-typescript',
-    'plugin:nuxt/recommended',
+    'plugin:vue/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
     'prettier',
+    'plugin:prettier/recommended',
   ],
-  plugins: [],
-  // add your custom rules here
+  plugins: ['prettier', '@typescript-eslint'],
+  parser: 'vue-eslint-parser',
+  parserOptions: {
+    parser: '@typescript-eslint/parser',
+  },
   rules: {
     '@typescript-eslint/no-unused-vars': 'warn',
     'vue/no-unused-components': 'warn',

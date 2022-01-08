@@ -1,10 +1,12 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" :style="style">{{ label }}</button>
+  <button type="button" :class="classes" :style="style" @click="onClick">
+    {{ label }}
+  </button>
 </template>
 
 <script>
 export default {
-  name: 'my-button',
+  name: 'MyButton',
   props: {
     label: {
       type: String,
@@ -18,7 +20,7 @@ export default {
       type: String,
       default: 'medium',
       validator: function (value) {
-        return ['small', 'medium', 'large'].indexOf(value) !== -1;
+        return ['small', 'medium', 'large'].indexOf(value) !== -1
       },
     },
     backgroundColor: {
@@ -33,24 +35,24 @@ export default {
         'storybook-button--primary': this.primary,
         'storybook-button--secondary': !this.primary,
         [`storybook-button--${this.size}`]: true,
-      };
+      }
     },
     style() {
       return {
         backgroundColor: this.backgroundColor,
-      };
+      }
     },
   },
 
   methods: {
     onClick() {
-      this.$emit('onClick');
+      this.$emit('onClick')
     },
   },
-};
+}
 </script>
 <style lang="scss" scoped>
-.storybook-button{
+.storybook-button {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   border: 0;
@@ -78,5 +80,4 @@ export default {
     padding: 12px 24px;
   }
 }
-
 </style>
