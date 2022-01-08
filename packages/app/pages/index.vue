@@ -7,8 +7,16 @@
 <script lang="ts">
 import Vue from 'vue'
 import MyButton from '@ui/src/components/Button/Button.vue'
-export default Vue.extend({
+import { defineComponent, onMounted } from '@nuxtjs/composition-api'
+
+export default defineComponent({
   components: { MyButton },
   name: 'IndexPage',
+  setup() {
+    onMounted(() => {
+      console.log('Mounted')
+    })
+  }
 })
+
 </script>
